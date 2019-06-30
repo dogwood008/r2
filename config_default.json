@@ -98,6 +98,7 @@
       "url": "https://hooks.slack.com/services/xxxxxx",
       "channel": "#ch1",
       "username": "abc",
+      "loglevels": "USER_LVL,FATAL,ERROR,WARN",
       "keywords": ["error", "profit"]
     },
     "line": {

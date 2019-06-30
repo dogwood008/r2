@@ -10,12 +10,16 @@ export default class SlackIntegration {
 
   handler(message: string): void {
     const keywords = this.config.keywords;
+    const loglevels = this.config.loglevels;
     if (!(keywords instanceof Array)) {
       return;
     }
     if (!keywords.some(x => message.includes(x))) {
       return;
     }
+    // ignore if loglevels doesn't match
+    const loglevelChackArr: boolean[] = loglevels.split(',').map(ll => message.includes(ll));
+    if(!loglevelChackArr.some(ll => ll)) { return; }
     const payload = {
       text: message,
       channel: this.config.channel,

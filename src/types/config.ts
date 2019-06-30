@@ -33,6 +33,7 @@ export class SlackConfig extends Castable {
   @cast url: string;
   @cast channel: string;
   @cast username: string;
+  @cast loglevels: string;
   @cast
   @element(String)
   keywords: string[];

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    stdin_open: true
+    tty: true
+    ports:
+      - 8720:8720
+      - 8721:8721
+    environment:
+      - A=A

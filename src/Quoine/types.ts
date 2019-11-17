@@ -34,10 +34,10 @@ export class SendOrderResponse extends Castable {
   @cast funding_currency: string;
   @cast crypto_account_id?: any;
   @cast currency_pair_code: string;
-  @cast average_price: string;
-  @cast target: string;
+  @cast average_price?: any;
+  @cast target?: any;
   @cast order_fee: string;
-  @cast source_action: string;
+  @cast source_action?: any;
   @cast unwound_trade_id?: any;
   @cast trade_id?: any;
 }
@@ -72,15 +72,13 @@ export class OrdersResponse extends Castable {
   @cast funding_currency: string;
   @cast crypto_account_id?: any;
   @cast currency_pair_code: string;
-  @cast average_price: string;
-  @cast target: string;
+  @cast average_price?: any;
+  @cast target?: any;
   @cast order_fee: string;
-  @cast source_action: string;
+  @cast source_action?: any;
   @cast unwound_trade_id?: any;
-  @cast trade_id: string;
+  @cast trade_id?: any;
   @cast settings?: any;
-  @cast trailing_stop_type: boolean;
-  @cast trailing_stop_value: boolean;
   @cast
   @element(Execution)
   executions: Execution[];

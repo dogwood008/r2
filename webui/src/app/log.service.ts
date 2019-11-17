@@ -9,7 +9,7 @@ import * as ReconnectingWebSocket from 'reconnecting-websocket';
 @Injectable()
 export class LogService {
   private readonly host = window.location.hostname;
-  private readonly url = `ws://${this.host}:8721`; 
+  private readonly url = `wss://${this.host}:18721`; 
   private connected = false;
   log$: Observable<LogRecord>;
   socket: Subject<MessageEvent>;

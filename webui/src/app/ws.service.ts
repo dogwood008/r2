@@ -19,7 +19,7 @@ import * as ReconnectingWebSocket from 'reconnecting-websocket';
 @Injectable()
 export class WsService {
   private readonly host = window.location.hostname;
-  private readonly url = `ws://${this.host}:8720`;
+  private readonly url = `wss://${this.host}:18720`;
   private connected = false;
   error$: Observable<{ code: string }>;
   config$: Observable<ConfigRoot>;
